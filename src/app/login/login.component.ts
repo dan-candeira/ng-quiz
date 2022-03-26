@@ -7,13 +7,22 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  email;
+  password;
+
   constructor(private auth: AuthService) {}
 
   ngOnInit() {}
 
   onSubmit(): void {
-    this.auth.authenticate({}).subscribe((e) => {
-      console.log(e);
-    });
+    console.log(this.email, this.password);
+    this.auth
+      .authenticate({
+        email: 'profdev@tindin.com.br',
+        password: '123',
+      })
+      .subscribe((response) => {
+        this.auth.login(response?.token);
+      });
   }
 }
