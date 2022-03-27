@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   isAuthenticated(): boolean {
-    return !!localStorage.getItem('quizTonken');
+    return !!localStorage.getItem('quizToken');
   }
 
   authenticate(params): Observable<any> {
@@ -19,7 +19,11 @@ export class AuthService {
   }
 
   login(token): void {
-    localStorage.setItem('quizTonken', token);
+    localStorage.setItem('quizToken', token);
     this.router.navigate(['']);
+  }
+
+  logout(): void {
+    localStorage.removeItem('quizToken');
   }
 }
