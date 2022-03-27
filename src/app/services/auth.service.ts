@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import * as credentials from '../credentials.json';
 
-const URI = credentials.authUri;
+const URI = credentials.baseUri;
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -15,7 +15,7 @@ export class AuthService {
   }
 
   authenticate(params): Observable<any> {
-    return this.http.post(URI, params);
+    return this.http.post(`${URI}/auth`, params);
   }
 
   login(token): void {
@@ -26,5 +26,9 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('quizToken');
     this.router.navigate(['login']);
+  }
+
+  getToken(): string {
+    return localStorage.getItem('quizToken');
   }
 }
