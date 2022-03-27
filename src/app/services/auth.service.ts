@@ -25,5 +25,6 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('quizToken');
+    this.router.navigate(['login']);
   }
 }

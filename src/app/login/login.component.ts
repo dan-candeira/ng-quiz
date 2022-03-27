@@ -7,8 +7,10 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  email;
-  password;
+  user = {
+    email: null,
+    password: null,
+  };
 
   constructor(private auth: AuthService) {}
 
@@ -17,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.email, this.password);
+    console.log(this.user);
     this.auth
       .authenticate({
         email: 'profdev@tindin.com.br',

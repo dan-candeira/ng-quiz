@@ -3,12 +3,12 @@
 
   <label>
     <span>email</span>
-    <input type="text" [(ngModel)]="email" />
+    <input type="text" [(ngModel)]="user.email" />
   </label>
 
   <label>
     <span>password</span>
-    <input type="password" [(ngModel)]="password" />
+    <input type="password" [(ngModel)]="user.password" />
   </label>
 
   <button (click)="onSubmit()" type="button">login</button>
