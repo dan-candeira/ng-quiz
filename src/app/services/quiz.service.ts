@@ -6,7 +6,7 @@ import { AuthService } from './auth.service';
 
 const URI = credentials.baseUri;
 const QUIZZES_URI =
-  'quizzes?filter=team:623497e07ccb72a54717b9f4&fields=name, description, level,rewardXp,type';
+  'quizzes?filter=team:623497e07ccb72a54717b9f4&fields=name,description,level,rewardXp,type';
 
 @Injectable({ providedIn: 'root' })
 export class QuizService {
