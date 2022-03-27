@@ -1,1 +1,8 @@
-quiz works
+
+  <ul *ngFor="let quiz of quizzes">
+    <li>
+      {{ quiz?.description }}
+      <button>Editar</button>
+      <button>Deletar</button>
+    </li>
+  </ul>
