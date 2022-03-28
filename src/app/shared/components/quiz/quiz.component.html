@@ -1,10 +1,28 @@
-<form>
+<form class="[ form ] [ flow ]">
   <label>
     Título
-    <input type="text" />
+    <input type="text" name="title" [(ngModel)]="quiz.title" />
   </label>
+
   <label>
     Descrição
-    <input type="text" />
+    <input type="text" name="description" [(ngModel)]="quiz.description" />
   </label>
+
+  <label>
+    Tipo
+    <input type="text" name="type" [(ngModel)]="quiz.type" />
+  </label>
+
+  <label>
+    Team
+    <input type="text" name="type" [(ngModel)]="quiz.team" />
+  </label>
+
+  <label>
+    Tempo
+    <input type="text" name="number" [(ngModel)]="quiz.time" />
+  </label>
+
+  <button class="button" data-variant="dark" (click)="onSend()">Enviar</button>
 </form>
