@@ -1,19 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { QuizService } from '@services/quiz.service';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-quizzes',
   templateUrl: './quizzes.component.html',
-  styleUrls: ['./quizzes.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class QuizzesComponent implements OnInit {
-  quizzes: any;
-
-  constructor(private quizService: QuizService) {}
-
-  ngOnInit() {
-    this.quizService.loadQuizes().subscribe((resp) => {
-      this.quizzes = resp.quizzes;
-    });
-  }
+export class QuizzesComponent {
+  @Input() quizzes: any;
 }

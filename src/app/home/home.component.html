@@ -1,3 +1,7 @@
-home works
-<button>Adicionar quiz</button>
-<app-quiz></app-quiz>
+<div class="quiz">
+  <button>Adicionar quiz</button>
+  <section class="quiz__list">
+    <app-quizzes [quizzes]="quizzes"></app-quizzes>
+  </section>
+  <app-quiz></app-quiz>
+</div>

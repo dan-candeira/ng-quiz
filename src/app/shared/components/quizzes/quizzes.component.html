@@ -1,7 +1,14 @@
-<ul *ngFor="let quiz of quizzes">
-  <li>
-    {{ quiz?.description }}
-    <button>Editar</button>
-    <button>Deletar</button>
+<ul role="list" class="flow">
+  <li *ngFor="let quiz of quizzes" class="[ card ] [ flow ]">
+    <h2 class="card__title">{{ quiz?.description }}</h2>
+
+    <span [attr.data-variant]="quiz?.level | lowercase">
+      {{ quiz?.level | lowercase }}
+    </span>
+
+    <div class="card__actions">
+      <button class="button">Editar</button>
+      <button class="button" data-variant="ghost">Deletar</button>
+    </div>
   </li>
 </ul>

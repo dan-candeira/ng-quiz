@@ -1,0 +1,36 @@
+.card {
+  padding-block: 0.5rem;
+  padding-inline: 0.8rem;
+
+  border-radius: 0.4rem;
+
+  &__title {
+    margin-block: 0.4rem;
+  }
+
+  span {
+    display: block;
+
+    width: fit-content;
+
+    padding-block: 0.1rem;
+    padding-inline: 0.7rem;
+
+    border-radius: 3rem;
+
+    &[data-variant='easy'] {
+      background-color: get-color('primary-shade');
+      color: get-color('light');
+    }
+
+    &[data-variant='medium'] {
+      background-color: get-color('quaternary');
+      color: get-color('dark-shade');
+    }
+
+    &[data-variant='hard'] {
+      background-color: get-color('quinary-shade');
+      color: get-color('light');
+    }
+  }
+}

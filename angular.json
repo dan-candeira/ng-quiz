@@ -30,11 +30,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
             "stylePreprocessorOptions": {
-              "includePaths": ["src/scss"]
+              "includePaths": ["src/scss", "../node_modules/gorko"]
             },
             "scripts": []
           },

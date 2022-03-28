@@ -3505,6 +3505,13 @@ globby@^12.0.2:
     merge2 "^1.4.1"
     slash "^4.0.0"
 
+gorko@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/gorko/-/gorko-0.9.1.tgz#dffeb0bceee235dd1faea067fb55b6431c79f73e"
+  integrity sha512-yZCIqDoEyqRAiiAC6+hH7IcsfnJDCmCinVL79n+VwbcU7brAplwh1jjtky3p9O+jMlFknZzjjzqS/9K2BDRhEA==
+  dependencies:
+    sass "^1.26.5"
+
 graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4, graceful-fs@^4.2.6, graceful-fs@^4.2.9:
   version "4.2.9"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
@@ -5711,6 +5718,15 @@ sass@1.49.0:
   version "1.49.0"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.49.0.tgz#65ec1b1d9a6bc1bae8d2c9d4b392c13f5d32c078"
   integrity sha512-TVwVdNDj6p6b4QymJtNtRS2YtLJ/CqZriGg0eIAbAKMlN8Xy6kbv33FsEZSF7FufFFM705SQviHjjThfaQ4VNw==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
+sass@^1.26.5:
+  version "1.49.9"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.49.9.tgz#b15a189ecb0ca9e24634bae5d1ebc191809712f9"
+  integrity sha512-YlYWkkHP9fbwaFRZQRXgDi3mXZShslVmmo+FVK3kHLUELHHEYrCmL1x6IUjC7wLS6VuJSAFXRQS/DxdsC4xL1A==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"

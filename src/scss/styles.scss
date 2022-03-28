@@ -1,0 +1,36 @@
+@import 'reset';
+@import 'config';
+@import 'gorko/gorko.scss';
+
+// utilities
+@import 'utilities/flow';
+@import 'utilities/wrapper';
+@import 'utilities/radius';
+
+// blocks
+@import 'blocks/card';
+@import 'blocks/button';
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: get-color('light');
+
+  /* configuracao fontes */
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: get-color('dark');
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
