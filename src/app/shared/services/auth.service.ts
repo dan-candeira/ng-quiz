@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'environments/environment';
 import { Observable } from 'rxjs';
-import * as credentials from '../credentials.json';
 
-const URI = credentials.baseUri;
+const URI = environment.baseUri;
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -14,11 +14,11 @@ export class AuthService {
     return !!localStorage.getItem('quizToken');
   }
 
-  authenticate(params): Observable<any> {
+  authenticate(params: any): Observable<any> {
     return this.http.post(`${URI}/auth`, params);
   }
 
-  login(token): void {
+  login(token: string): void {
     localStorage.setItem('quizToken', token);
     this.router.navigate(['']);
   }
@@ -29,6 +29,6 @@ export class AuthService {
   }
 
   getToken(): string {
-    return localStorage.getItem('quizToken');
+    return localStorage.getItem('quizToken') || '';
   }
 }

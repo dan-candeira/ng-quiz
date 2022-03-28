@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizService } from '../../services/quiz.service';
+import { QuizService } from '@services/quiz.service';
 
 @Component({
-  selector: 'app-quiz',
-  templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.css'],
+  selector: 'app-quizzes',
+  templateUrl: './quizzes.component.html',
+  styleUrls: ['./quizzes.component.css'],
 })
-export class QuizComponent implements OnInit {
-  quizzes;
+export class QuizzesComponent implements OnInit {
+  quizzes: any;
+
   constructor(private quizService: QuizService) {}
 
   ngOnInit() {
     this.quizService.loadQuizes().subscribe((resp) => {
-      console.log(resp);
       this.quizzes = resp.quizzes;
     });
   }
