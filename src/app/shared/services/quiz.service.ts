@@ -24,7 +24,21 @@ export class QuizService {
     });
   }
 
-  deleteQuizzes(): void {}
+  loadQuiz(id: string): Observable<any> {
+    const header = new HttpHeaders().append('x-api-key', this.auth.getToken());
+
+    return this.http.get(`${URI}/quizzes/${id}`, {
+      headers: header,
+    });
+  }
+
+  createQuizzes(body: any): Observable<any> {
+    const header = new HttpHeaders().append('x-api-key', this.auth.getToken());
+
+    return this.http.post(`${URI}/quizzes`, JSON.stringify(body), {
+      headers: header,
+    });
+  }
 
   appendParams(params: any): HttpParams {
     let queryParams = new HttpParams();
