@@ -7,8 +7,14 @@
     </span>
 
     <div class="card__actions">
-      <button class="button">Editar</button>
-      <button class="button" data-variant="ghost">Deletar</button>
+      <button class="button" (click)="onEditQuiz(quiz?._id)">Editar</button>
+      <button
+        class="button"
+        data-variant="ghost"
+        (click)="onDeleteQuiz(quiz?._id)"
+      >
+        Deletar
+      </button>
     </div>
   </li>
 </ul>

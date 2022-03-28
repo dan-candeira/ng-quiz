@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private quizService: QuizService) {}
 
   ngOnInit() {
-    this.quizService.loadQuizes().subscribe((resp) => {
+    this.quizService.loadQuizzes().subscribe((resp) => {
       this.quizzes = resp.quizzes;
     });
   }

@@ -9,9 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, EditComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

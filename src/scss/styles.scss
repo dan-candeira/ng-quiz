@@ -1,6 +1,11 @@
 @import 'reset';
 @import 'config';
+
+// external library (package json)
 @import 'gorko/gorko.scss';
+@import 'variant-config';
+
+@import 'mixins/variant-generator';
 
 // utilities
 @import 'utilities/flow';
@@ -14,15 +19,14 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: get-color('light');
 
-  /* configuracao fontes */
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: get-color('dark');
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: get-color('light');
+  color: get-color('dark-shade');
+
+  line-height: 1.5;
+  font-size: get-size('500');
+
+  @include apply-utility('font', 'base');
   -webkit-font-smoothing: antialiased !important;
 }
 
@@ -31,6 +35,41 @@ h2,
 h3,
 h4 {
   font-weight: 900;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @include apply-utility('font', 'sans');
+  @include apply-utility('leading', 'flat');
+}
+
+// High contrast selection because it can help visually-impaired
+// folks read the text easier
+::selection {
+  color: get-color('light');
+
+  // We set this as an RGBA because that’s how you get a solid color, by using 0.99
+  // alpha value. Browsers are wild.
+  background: rgba(get-color('dark-shade'), 0.99);
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid get-color('dark-glare');
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: get-color('dark');
+  border-radius: 0.25rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :focus {
+    outline: 3px dotted get-color('primary');
+    transition: outline-offset 0.25s ease;
+    outline-offset: 5px;
+  }
 }

@@ -14,7 +14,7 @@ const QUERY_PARAMS = {
 export class QuizService {
   constructor(private http: HttpClient, private auth: AuthService) {}
 
-  loadQuizes(): Observable<any> {
+  loadQuizzes(): Observable<any> {
     const header = new HttpHeaders().append('x-api-key', this.auth.getToken());
     const queryParams = this.appendParams(QUERY_PARAMS);
 
@@ -23,6 +23,8 @@ export class QuizService {
       params: queryParams,
     });
   }
+
+  deleteQuizzes(): void {}
 
   appendParams(params: any): HttpParams {
     let queryParams = new HttpParams();

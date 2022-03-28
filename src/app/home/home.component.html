@@ -1,7 +1,7 @@
-<div class="quiz">
-  <button>Adicionar quiz</button>
-  <section class="quiz__list">
-    <app-quizzes [quizzes]="quizzes"></app-quizzes>
-  </section>
-  <app-quiz></app-quiz>
+<div class="quiz__main-action">
+  <button class="button" data-variant="dark">Adicionar quiz</button>
+  <button class="button" data-variant="ghost">logout</button>
 </div>
+<section>
+  <app-quizzes [quizzes]="quizzes"></app-quizzes>
+</section>
