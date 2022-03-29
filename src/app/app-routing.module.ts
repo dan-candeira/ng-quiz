@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'edit/:id', component: EditComponent, canActivate: [AuthGuard] },
   { path: 'create', component: CreateComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LoginComponent },
   { path: '**', redirectTo: '' },
 ];
 

@@ -23,4 +23,12 @@ export class EditComponent implements OnInit {
       });
     });
   }
+
+  onSendForm(data: any): void {
+    data = { ...data, id: data?._id };
+    console.log(data);
+    this.quizService.editQuizzes(data).subscribe((resp) => {
+      console.log(resp);
+    });
+  }
 }

@@ -40,6 +40,14 @@ export class QuizService {
     });
   }
 
+  editQuizzes(body: any): Observable<any> {
+    const header = new HttpHeaders().append('x-api-key', this.auth.getToken());
+
+    return this.http.put(`${URI}/quizzes`, JSON.stringify(body), {
+      headers: header,
+    });
+  }
+
   appendParams(params: any): HttpParams {
     let queryParams = new HttpParams();
 
