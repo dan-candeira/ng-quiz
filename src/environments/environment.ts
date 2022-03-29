@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUri: 'https://h-api-ava.tindin.com.br',
+  baseUri: '',
 };
 
 /*
