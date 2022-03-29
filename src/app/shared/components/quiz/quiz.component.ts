@@ -13,6 +13,7 @@ import {
 })
 export class QuizComponent implements OnChanges {
   quiz: any = {
+    _id: null,
     title: null,
     description: null,
     level: null,
@@ -36,7 +37,6 @@ export class QuizComponent implements OnChanges {
   }
 
   onSend(): void {
-    console.log(this.quiz);
     this.sendQuiz.emit(this.quiz);
   }
 }
