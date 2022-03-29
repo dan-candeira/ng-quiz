@@ -1,7 +1,8 @@
-<div class="quiz__main-action">
-  <button class="button" data-variant="dark">Adicionar quiz</button>
-  <button class="button" data-variant="ghost">logout</button>
-</div>
 <section>
+  <div class="quiz__main-action">
+    <a routerLink="create" class="button" data-variant="dark">Adicionar quiz</a>
+    <button class="button" data-variant="ghost">logout</button>
+  </div>
+
   <app-quizzes [quizzes]="quizzes"></app-quizzes>
 </section>
