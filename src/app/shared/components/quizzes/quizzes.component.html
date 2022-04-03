@@ -7,7 +7,7 @@
     </span>
 
     <div class="card__actions">
-      <button class="button" (click)="onEditQuiz(quiz?._id)">Editar</button>
+      <a class="button" [routerLink]="['edit', quiz?._id]">Editar</a>
       <button
         class="button"
         data-variant="ghost"
